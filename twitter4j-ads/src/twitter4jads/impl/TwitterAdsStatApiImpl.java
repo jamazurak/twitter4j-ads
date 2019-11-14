@@ -47,7 +47,7 @@ import static twitter4jads.TwitterAdsConstants.PARAM_SEGMENTATION_TYPE;
 import static twitter4jads.TwitterAdsConstants.PARAM_START_TIME;
 import static twitter4jads.TwitterAdsConstants.PARAM_WITH_DELETED;
 import static twitter4jads.TwitterAdsConstants.PATH_REACH_STATS;
-import static twitter4jads.TwitterAdsConstants.PREFIX_ACCOUNTS_URI_4;
+import static twitter4jads.TwitterAdsConstants.PREFIX_ACCOUNTS_URI_6;
 import static twitter4jads.TwitterAdsConstants.PREFIX_STATS_ACCOUNTS_URI;
 import static twitter4jads.TwitterAdsConstants.V4_PREFIX_STATS_JOB_ACCOUNTS_URI;
 
@@ -108,7 +108,7 @@ public class TwitterAdsStatApiImpl implements TwitterAdsStatApi {
 
         final String startTimeAsString = TwitterAdUtil.convertTimeToZuluFormatAndToUTC(startTime);
         final String endTimeAsString = TwitterAdUtil.convertTimeToZuluFormatAndToUTC(endTime);
-        final String baseUrl = twitterAdsClient.getBaseAdsAPIUrl() + PREFIX_ACCOUNTS_URI_4 + accountId + "/auction_insights";
+        final String baseUrl = twitterAdsClient.getBaseAdsAPIUrl() + PREFIX_ACCOUNTS_URI_6 + accountId + "/auction_insights";
 
         final List<HttpParameter> params = new ArrayList<>();
         params.add(new HttpParameter(GRANULARITY, granularity.toString()));
